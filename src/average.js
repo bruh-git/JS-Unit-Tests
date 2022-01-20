@@ -11,19 +11,18 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-//Resolução nesse link => https://www.codegrepper.com/code-examples/javascript/fun%C3%A7%C3%A3o+que+retorna+uma+media+aritm%C3%A9tica+javascript
-
+// Resolução nesse link => https://www.codegrepper.com/code-examples/javascript/fun%C3%A7%C3%A3o+que+retorna+uma+media+aritm%C3%A9tica+javascript
 // const average = (array) => array.reduce((a, b) => Math.round((a + b) / array.length));
 
 // console.log(average([5,7.9, '5']));
 
 const average = (array) => {
-  let soma =0;
+  let soma = 0;
   let result = 0;
   if (array.length === 0) {
     return undefined;
   }
-  for (let i = 0; i < array.length; i +=1) {
+  for (let i = 0; i < array.length; i += 1) {
     soma += array[i];
     if (typeof soma !== 'number') {
       return undefined;
