@@ -25,31 +25,14 @@ const circle = require('../src/circle');
 
 describe('4 - Implemente os casos de teste para a função `circle`', () => {
   it('Verifica se ao receber um raio, a função `circle` retorna um objeto contedos os valores esperados', () => {
-    expect(typeof circle).toBe('object');
-
-
-
-    it('Verifica se ao receber um array de números a função `average` retorna a média de seus valores', () => {
-      expect(average([3, 4, 5])).toEqual(4);
-      expect(average([0, 0, 0, 0, 0, 0, 0])).toEqual(0);    
-      expect(average([1, 2, 3])).toEqual(2);
-      expect(average([0, 0, 0, 0, 0, 0, 1])).toEqual(0);    
-      expect(average([47, 63, 122])).toEqual(77);
-  
-      expect(average([-11, 2, 5])).toEqual(-1);    
-      expect(average([-11, -5, 2])).toEqual(-5);
-    });
-  
-    it('Verifica se ao receber um array que contém valores não numéricos a função `average` retorna `undefined`', () => {
-      expect(average([1, 2, 3, '4', 5])).toBeUndefined();
-      expect(average(['um', 'dois', 'tres'])).toBeUndefined();
-      expect(average([1, 2, '3'])).toBeUndefined();
-      expect(average([' '])).toBeUndefined();
-    });
-  
-    it('Verifica se ao receber um array vazio a função `average` retorna `undefined`', () => {
-      expect(average([])).toBeUndefined();
-    });
+      expect(circle(['um', 'dois', 'tres'])).toBeUndefined();
+      expect(circle([1, 2, '3'])).toBeUndefined();
+      expect(typeof circle).toBe('object');
+      expect(circle('Parametro')).tobe('radius, area e circumference');
+      expect(circle([])).toBeUndefined();
+      expect(circle()).toBe('object');
+      expect(circle()).toBe('object');
+      expect(circle(3)).toBe('object');
   });
   
     // ESCREVA SEUS TESTES ABAIXO:
@@ -61,4 +44,4 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     // Teste se dentro do objeto retornado, a função retorna uma key com value igual a área correta para um círculo de raio 3.
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
   });
-});
+
